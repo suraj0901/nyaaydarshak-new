@@ -27,7 +27,7 @@ export default function NewsLetter() {
             </h3>
             <form className="flex flex-col lg:flex-row gap-2 items-center ">
               <Input placeholder="Your email address" />
-              <Button variant="outline" className="w-full">
+              <Button variant="outline" className="w-full lg:w-fit">
                 Join Newsletter <ChevronRight className="ml-1" size={15} />
               </Button>
             </form>
