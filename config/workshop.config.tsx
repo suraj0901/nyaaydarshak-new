@@ -16,7 +16,7 @@ const WORKSHOP_CONFIG = [
         viewBox="0 0 64 64"
         fill="none"
       >
-        <g clip-path="url(#clip0_58_989)">
+        <g clipPath="url(#clip0_58_989)">
           <path
             d="M52 64H12C5.372 64 0 58.628 0 52V12C0 5.372 5.372 0 12 0H52C58.628 0 64 5.372 64 12V52C64 58.628 58.628 64 52 64Z"
             fill="#E8EEFC"
@@ -70,7 +70,7 @@ const WORKSHOP_CONFIG = [
         viewBox="0 0 64 64"
         fill="none"
       >
-        <g clip-path="url(#clip0_58_1107)">
+        <g clipPath="url(#clip0_58_1107)">
           <path
             d="M52 64H12C5.372 64 0 58.628 0 52V12C0 5.372 5.372 0 12 0H52C58.628 0 64 5.372 64 12V52C64 58.628 58.628 64 52 64Z"
             fill="#F7FAE1"
@@ -118,7 +118,7 @@ const WORKSHOP_CONFIG = [
         viewBox="0 0 64 64"
         fill="none"
       >
-        <g clip-path="url(#clip0_58_1093)">
+        <g clipPath="url(#clip0_58_1093)">
           <path
             d="M52 64H12C5.372 64 0 58.628 0 52V12C0 5.372 5.372 0 12 0H52C58.628 0 64 5.372 64 12V52C64 58.628 58.628 64 52 64Z"
             fill="#FCF7E3"
@@ -161,7 +161,7 @@ export function DotIcon() {
       viewBox="0 0 20 20"
       fill="none"
     >
-      <g clip-path="url(#clip0_58_1001)">
+      <g clipPath="url(#clip0_58_1001)">
         <path
           d="M16.251 20.0002H3.75098C1.67975 20.0002 0.000976562 18.3215 0.000976562 16.2502V3.75024C0.000976562 1.67902 1.67975 0.000244141 3.75098 0.000244141H16.251C18.3222 0.000244141 20.001 1.67902 20.001 3.75024V16.2502C20.001 18.3215 18.3222 20.0002 16.251 20.0002Z"
           fill="#F6F9FC"

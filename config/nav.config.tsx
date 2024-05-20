@@ -5,7 +5,7 @@ const NAV_CONFIG = [
   },
   {
     label: "Our Services",
-    link: "/out-services",
+    link: "/our-services",
   },
   {
     label: "Blog",

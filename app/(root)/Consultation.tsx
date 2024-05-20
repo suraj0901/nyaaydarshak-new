@@ -1,6 +1,7 @@
 import CONSULTATION_CONFIG from "@/config/consultation.config";
+import { ReactNode } from "react";
 
-export default function Consultation() {
+export default function Consultation({ children }: { children?: ReactNode }) {
   return (
     <section
       id="consultation"
@@ -20,6 +21,7 @@ export default function Consultation() {
           need to assert your rights and seek justice.
         </p>
       </div>
+      {children}
       <div className="grid lg:grid-cols-2 gap-y-12">
         {CONSULTATION_CONFIG.map((item) => (
           <div

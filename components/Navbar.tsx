@@ -34,10 +34,12 @@ export default function Navbar() {
                 >
                   Donate <Heart className="ml-1" size={15} />
                 </Button>
-                <Button className="text-sm font-semibold w-full">
-                  Book Consultation Call{" "}
-                  <ChevronRight size={15} className="ml-1" />
-                </Button>
+                <Link href={"/book-consultation"}>
+                  <Button className="text-sm font-semibold w-full">
+                    Book Consultation Call{" "}
+                    <ChevronRight size={15} className="ml-1" />
+                  </Button>
+                </Link>
               </section>
             </SheetContent>
           </Sheet>
@@ -49,9 +51,12 @@ export default function Navbar() {
             <Button variant="outline" className="text-sm font-semibold">
               Donate <Heart className="ml-1" size={15} />
             </Button>
-            <Button className="text-sm font-semibold">
-              Book Consultation Call <ChevronRight size={15} className="ml-1" />
-            </Button>
+            <Link href={"/book-consultation"}>
+              <Button className="text-sm font-semibold">
+                Book Consultation Call{" "}
+                <ChevronRight size={15} className="ml-1" />
+              </Button>
+            </Link>
           </section>
         </div>
       </header>

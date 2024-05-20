@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 

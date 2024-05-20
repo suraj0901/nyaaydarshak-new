@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { Lora } from "next/font/google";
 import Image from "next/image";
 import PageNavigation from "./PageNavigation";
+import Link from "next/link";
 
 const lora = Lora({ subsets: ["latin"], weight: "700" });
 
@@ -21,9 +22,14 @@ export default function HeroSection() {
             >
               Making Rights Accessible & Affordable
             </h1>
-            <Button className="text-sm font-semibold">
-              Book Consultation Call <ChevronRight size={15} className="ml-1" />
-            </Button>
+            <div>
+              <Link href={"/book-consultation"}>
+                <Button className="text-sm font-semibold">
+                  Book Consultation Call
+                  <ChevronRight size={15} className="ml-1" />
+                </Button>
+              </Link>
+            </div>
           </div>
           <Image
             src={"/HeroImage.png"}

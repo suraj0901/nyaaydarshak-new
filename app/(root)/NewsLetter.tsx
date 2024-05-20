@@ -52,7 +52,7 @@ function NewsLetterIcon() {
       viewBox="0 0 64 64"
       fill="none"
     >
-      <g clip-path="url(#clip0_67_1459)">
+      <g clipPath="url(#clip0_67_1459)">
         <path
           d="M52 64H12C5.372 64 0 58.628 0 52V12C0 5.372 5.372 0 12 0H52C58.628 0 64 5.372 64 12V52C64 58.628 58.628 64 52 64Z"
           fill="#FCF7E3"
