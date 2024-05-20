@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <section className="lg:py-[60px] py-7">
       <div className="container relative px-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
           <div className="space-y-5 max-w-xl">
             <h1
               className={cn(

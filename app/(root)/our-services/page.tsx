@@ -11,7 +11,7 @@ export default function OurServices() {
     <main>
       <HeroSection />
       <Consultation>
-        <div className="flex justify-between">
+        <div className="flex flex-col lg:flex-row justify-between">
           <Image
             src={"/our-services/consultation.png"}
             width={500}
@@ -19,7 +19,7 @@ export default function OurServices() {
             alt="Hero Image"
             className="object-contain"
           />
-          <div className="my-auto max-w-[608px] px-6 py-8">
+          <div className="my-auto max-w-[608px] lg:px-6 lg:py-8 p-4">
             {OUR_SERVICES.map((item, index) => (
               <div key={index} className="my-1.5 flex items-start gap-x-2">
                 <div className="shrink-0 mt-1">
