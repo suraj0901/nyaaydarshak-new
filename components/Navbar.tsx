@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { ChevronRight, HamIcon, Heart, Menu } from "lucide-react";
 import { Lato } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -26,7 +26,16 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <ul className="flex flex-col">{nav_items}</ul>
+              <ul className="flex flex-col">
+                <SheetClose asChild>
+                  <NavItem label="Home" link="/" />
+                </SheetClose>
+                {NAV_CONFIG.map((nav_item) => (
+                  <SheetClose key={nav_item.label} asChild>
+                    <NavItem key={nav_item.label} {...nav_item} />
+                  </SheetClose>
+                ))}
+              </ul>
               <section className="space-y-4">
                 <Button
                   variant="outline"
@@ -34,16 +43,20 @@ export default function Navbar() {
                 >
                   Donate <Heart className="ml-1" size={15} />
                 </Button>
-                <Link href={"/book-consultation"}>
-                  <Button className="text-sm font-semibold w-full">
-                    Book Consultation Call{" "}
-                    <ChevronRight size={15} className="ml-1" />
-                  </Button>
-                </Link>
+                <div>
+                  <Link href={"/book-consultation"}>
+                    <Button className="text-sm font-semibold w-full">
+                      Book Consultation Call{" "}
+                      <ChevronRight size={15} className="ml-1" />
+                    </Button>
+                  </Link>
+                </div>
               </section>
             </SheetContent>
           </Sheet>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
         <div className="hidden  lg:flex items-center justify-between flex-1">
           <div className="flex items-center">{nav_items}</div>
@@ -51,12 +64,14 @@ export default function Navbar() {
             <Button variant="outline" className="text-sm font-semibold">
               Donate <Heart className="ml-1" size={15} />
             </Button>
-            <Link href={"/book-consultation"}>
-              <Button className="text-sm font-semibold">
-                Book Consultation Call{" "}
-                <ChevronRight size={15} className="ml-1" />
-              </Button>
-            </Link>
+            <div>
+              <Link href={"/book-consultation"}>
+                <Button className="text-sm font-semibold">
+                  Book Consultation Call{" "}
+                  <ChevronRight size={15} className="ml-1" />
+                </Button>
+              </Link>
+            </div>
           </section>
         </div>
       </header>

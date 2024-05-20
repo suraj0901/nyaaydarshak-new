@@ -27,7 +27,7 @@ export function Option({
           <div className="flex items-start gap-x-3">
             <RadioGroupItem
               className={cn(
-                "mt-1 w-[18px] h-[18px]",
+                "mt-1 w-[18px] h-[18px] shrink-0",
                 currentValue == value
                   ? "text-white bg-blue-600 border-blue-600"
                   : "border-gray-400"
