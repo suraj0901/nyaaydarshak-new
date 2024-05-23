@@ -1,7 +1,7 @@
 const NAV_CONFIG = [
   {
     label: "About Us",
-    link: "/about",
+    link: "/about-us",
   },
   {
     label: "Our Services",
