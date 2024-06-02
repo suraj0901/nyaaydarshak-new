@@ -139,7 +139,7 @@ export default function TermsOfService() {
               please contact us at
             </p>
             <a
-              className="hover:underline text-blue-500"
+              className="hover:underline underline-offset-4 text-blue-500"
               href="mailto:contact.us.nyaaydarshak@gmail.com"
             >
               contact.us.nyaaydarshak@gmail.com

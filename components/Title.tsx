@@ -1,5 +1,8 @@
 import { cn } from "@/lib/utils";
+import { Lato } from "next/font/google";
 import { ReactNode } from "react";
+
+const lato = Lato({ subsets: ["latin"], weight: "700" });
 
 export default function Title({
   children,
@@ -9,13 +12,14 @@ export default function Title({
   className?: string;
 }) {
   return (
-    <h1
+    <p
       className={cn(
-        "lg:text-4xl text-[22px] tracking-wider lg:leading-[46px]  leading-[30px] font-semibold max-w-2xl",
-        className
+        "[word-spacing:2px] lg:text-4xl text-[22px]  lg:leading-[46px] leading-[30px]",
+        className,
+        lato.className
       )}
     >
       {children}
-    </h1>
+    </p>
   );
 }

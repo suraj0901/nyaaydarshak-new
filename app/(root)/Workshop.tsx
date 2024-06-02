@@ -1,3 +1,4 @@
+import Title from "@/components/Title";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import WORKSHOP_CONFIG, { DotIcon } from "@/config/workshop.config";
 
@@ -6,9 +7,10 @@ export default function Workshop() {
     <section id="training" className="bg-[#F6F9FC] lg:py-[60px] py-7">
       <div className="container px-4 space-y-10">
         <div className="space-y-4">
-          <h1 className="lg:text-4xl text-[22px] tracking-wider lg:leading-[46px]  leading-[30px] font-semibold max-w-2xl">
-            Empower Your Team - Awareness Workshops on Legal Rights{" "}
-          </h1>
+          <Title>
+            Empower Your Team - <br className="hidden lg:block" /> Awareness
+            Workshops on Legal Rights{" "}
+          </Title>
           <p className="tracking-wide">
             Our training program offers essential legal insights tailored for
             teams and organizations. Learn how to navigate workplace dynamics,

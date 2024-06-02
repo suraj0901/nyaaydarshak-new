@@ -1,3 +1,4 @@
+import Title from "@/components/Title";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ChevronRight } from "lucide-react";
@@ -11,9 +12,10 @@ export default function NewsLetter() {
             <NewsLetterIcon />
           </div>
           <div className="space-y-6">
-            <h1 className="lg:text-4xl text-[22px] tracking-wider lg:leading-[46px]  leading-[30px] font-semibold max-w-2xl">
-              Crisp articles straight to your inbox
-            </h1>
+            <Title>
+              Crisp articles straight <br className="hidden lg:block" /> to your
+              inbox
+            </Title>
             <p className="text-[#616161]">
               Sign up for our newsletter to receive updates on our work and
               latest legal developments around gender-based violence.
@@ -22,9 +24,7 @@ export default function NewsLetter() {
         </div>
         <div className="flex-1 space-y-6">
           <div className="space-y-4">
-            <h3 className="lg:text-[22px] font-semibold">
-              Subscribe to the newsletter
-            </h3>
+            <h3 className="lg:text-[22px]">Subscribe to the newsletter</h3>
             <form className="flex flex-col lg:flex-row gap-2 items-center ">
               <Input placeholder="Your email address" />
               <Button variant="outline" className="w-full lg:w-fit">

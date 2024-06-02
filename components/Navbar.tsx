@@ -6,6 +6,7 @@ import { ChevronRight, HamIcon, Heart, Menu } from "lucide-react";
 import { Lato } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
+import CallToAction from "./CallToAction";
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -14,9 +15,12 @@ export default function Navbar() {
     <NavItem key={nav_item.label} {...nav_item} />
   ));
   return (
-    <section className="shadow">
+    <section className="shadow-[0px_2px_12px_0px_rgba(32,_32,_32,_0.08)] sticky top-0 bg-white z-10">
       <header
-        className={cn(lato.className, "container px-4 py-1 flex gap-x-8")}
+        className={cn(
+          lato.className,
+          "container px-2 py-3 lg:px-4 lg:py-1.5 flex gap-x-8"
+        )}
       >
         <div className="flex items-center">
           <Sheet>
@@ -44,33 +48,26 @@ export default function Navbar() {
                   Donate <Heart className="ml-1" size={15} />
                 </Button>
                 <div>
-                  <Link href={"/book-consultation"}>
-                    <Button className="text-sm font-semibold w-full">
-                      Book Consultation Call{" "}
-                      <ChevronRight size={15} className="ml-1" />
-                    </Button>
-                  </Link>
+                  <CallToAction className="w-full" />
                 </div>
               </section>
             </SheetContent>
           </Sheet>
-          <Link href="/">
+          <Link className="hover:underline underline-offset-4" href="/">
             <Logo />
           </Link>
         </div>
         <div className="hidden  lg:flex items-center justify-between flex-1">
           <div className="flex items-center">{nav_items}</div>
           <section className="flex items-center gap-x-2">
-            <Button variant="outline" className="text-sm font-semibold">
+            <Button
+              variant="outline"
+              className="!px-6 !py-[22px] lg:!py-5 text-sm font-semibold"
+            >
               Donate <Heart className="ml-1" size={15} />
             </Button>
             <div>
-              <Link href={"/book-consultation"}>
-                <Button className="text-sm font-semibold">
-                  Book Consultation Call{" "}
-                  <ChevronRight size={15} className="ml-1" />
-                </Button>
-              </Link>
+              <CallToAction className="!py-[22px]" />
             </div>
           </section>
         </div>
@@ -86,7 +83,7 @@ interface NavItem {
 
 function NavItem({ label, link }: NavItem) {
   return (
-    <Link href={link} className="p-4">
+    <Link className="hover:underline underline-offset-4 p-4" href={link}>
       {label}
     </Link>
   );

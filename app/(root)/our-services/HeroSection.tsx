@@ -1,3 +1,4 @@
+import CallToAction from "@/components/CallToAction";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ChevronRight } from "lucide-react";
@@ -22,12 +23,7 @@ export default function HeroSection() {
               Empowering Change, Ensuring Justice
             </h1>
             <div>
-              <Link href={"/book-consultation"}>
-                <Button className="text-sm font-semibold">
-                  Book Consultation Call
-                  <ChevronRight size={15} className="ml-1" />
-                </Button>
-              </Link>
+              <CallToAction />
             </div>
           </div>
           <Image

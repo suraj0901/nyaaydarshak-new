@@ -13,53 +13,71 @@ export default function Footer() {
         </section>
         <section className="space-y-4">
           <p className="tracking-wider text-gray-500 uppercase">GENERAL</p>
-          <div className="space-y-1.5">
-            <Link href={"/"}>
-              <p>Home</p>
+          <div className="grid gap-y-2">
+            <Link className="hover:underline underline-offset-4" href={"/"}>
+              <p className="">Home</p>
             </Link>
-            <Link href={"/about-us"}>
+            <Link
+              className="hover:underline underline-offset-4"
+              href={"/about-us"}
+            >
               <p>About Us</p>
             </Link>
-            <Link href={"/our-services"}>
+            <Link
+              className="hover:underline underline-offset-4"
+              href={"/our-services"}
+            >
               <p>Our Services</p>
             </Link>
           </div>
         </section>
         <section className="space-y-4">
           <p className="tracking-wider text-gray-500 uppercase">RESOURCES</p>
-          <div className="space-y-1.5">
-            <Link href="/contact-us">
+          <div className="grid gap-y-2">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="/contact-us"
+            >
               <p>Contact Us</p>
             </Link>
-            <Link href="/blog">
+            <Link className="hover:underline underline-offset-4" href="/blog">
               <p>Blog</p>
             </Link>
           </div>
         </section>
         <section className="space-y-4">
           <p className="tracking-wider text-gray-500 uppercase">ORGANIZATION</p>
-          <div className="space-y-1.5">
-            <Link href="/privacy-policy">
+          <div className="grid gap-y-2">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="/privacy-policy"
+            >
               <p>Privacy Policy</p>
             </Link>
-            <Link href="/terms-of-service">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="/terms-of-service"
+            >
               <p>Terms of Service</p>
             </Link>
           </div>
         </section>
         <section className="space-y-4">
           <h4 className="tracking-wide text-gray-500 uppercase">SOCIAL</h4>
-          <div className="space-y-1.5">
-            <Link href="/">
+          <div className="grid gap-y-2">
+            <Link className="hover:underline underline-offset-4" href="/">
               <p>X/Twitter</p>
             </Link>
-            <Link href="/">
+            <Link className="hover:underline underline-offset-4" href="/">
               <p>Facebook</p>
             </Link>
-            <Link href="/">
+            <Link className="hover:underline underline-offset-4" href="/">
               <p>Instagram</p>
             </Link>
-            <Link href="/">
+            <Link className="hover:underline underline-offset-4" href="/">
+              <p>Linkedin</p>
+            </Link>
+            <Link className="hover:underline underline-offset-4" href="/">
               <p>Youtube</p>
             </Link>
           </div>

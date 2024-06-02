@@ -1,8 +1,22 @@
+import Link from "next/link";
+
 const FAQ_CONFIG = [
   {
     question: "How can I get involved as a volunteer with your NGO?",
-    answer:
-      "Feel free to reach out to us at [contact.us.nyaaydarshak@gmail.com] to express your interest in volunteering. We will promptly follow up with you to discuss current opportunities and how you can contribute to our mission. We look forward to connecting with you soon!",
+    answer: (
+      <>
+        Feel free to reach out to us at{" "}
+        <Link
+          className="underline underline-offset-4"
+          href={`mailto:contact.us.nyaaydarshak@gmail.com`}
+        >
+          contact.us.nyaaydarshak@gmail.com
+        </Link>{" "}
+        to express your interest in volunteering. We will promptly follow up
+        with you to discuss current opportunities and how you can contribute to
+        our mission. We look forward to connecting with you soon!
+      </>
+    ),
   },
   {
     question: "How can I support your NGO?",

@@ -16,10 +16,10 @@ export default function Navbar() {
           "container px-4 py-3 flex gap-x-8 justify-between"
         )}
       >
-        <Link href={"/"}>
+        <Link className="hover:underline underline-offset-4" href={"/"}>
           <Logo />
         </Link>
-        <Link href={"/"}>
+        <Link className="hover:underline underline-offset-4" href={"/"}>
           <Button
             size={"sm"}
             variant="outline"
