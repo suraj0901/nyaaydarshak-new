@@ -1,12 +1,12 @@
 import NAV_CONFIG from "@/config/nav.config";
-import Logo from "./Logo";
-import Link from "next/link";
-import { Button } from "./ui/button";
-import { ChevronRight, HamIcon, Heart, Menu } from "lucide-react";
-import { Lato } from "next/font/google";
 import { cn } from "@/lib/utils";
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Heart, Menu } from "lucide-react";
+import { Lato } from "next/font/google";
+import Link from "next/link";
 import CallToAction from "./CallToAction";
+import Logo from "./Logo";
+import { Button } from "./ui/button";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 

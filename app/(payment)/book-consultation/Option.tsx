@@ -22,7 +22,7 @@ export function Option({
 }) {
   return (
     <Label>
-      <Card className="border-gray-200 rounded-2xl [&:has(input:checked)]:border-blue-600  [&:has(input:checked)]:ring-blue-600 [&:has(input:checked)]:ring-1 max-w-screen-sm">
+      <Card className="cursor-pointer border-gray-200 rounded-2xl [&:has(input:checked)]:border-blue-600  [&:has(input:checked)]:ring-blue-600 [&:has(input:checked)]:ring-1 max-w-screen-sm">
         <CardHeader>
           <div className="flex items-start gap-x-3">
             <RadioGroupItem
@@ -32,6 +32,7 @@ export function Option({
                   ? "text-white bg-blue-600 border-blue-600"
                   : "border-gray-400"
               )}
+              checked={currentValue === value}
               id={value + ""}
               value={value + ""}
             />

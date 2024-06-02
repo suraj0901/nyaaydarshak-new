@@ -19,7 +19,11 @@ enum Service {
 }
 
 export default function Payment() {
-  const form = useForm();
+  const form = useForm({
+    defaultValues: {
+      service: Service.UPI,
+    },
+  });
   const router = useRouter();
   function onSubmit(data: any) {
     if (data.service == Service.UPI) {

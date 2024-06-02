@@ -25,7 +25,7 @@ export default function Navbar() {
             variant="outline"
             className="lg:text-sm text-xs font-semibold"
           >
-            <ChevronLeft size={15} className="lg:mr-1 mr-0.5" />
+            {/* <ChevronLeft size={15} className="lg:mr-1 mr-0.5" /> */}
             Back to Home
           </Button>
         </Link>
