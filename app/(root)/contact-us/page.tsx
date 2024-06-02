@@ -4,9 +4,11 @@ import ContactForm from "./ContactForm";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import useSubmitContactDetail from "@/hooks/mutations/useSubmitContactDetail";
 
 export default function ContactUs() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const { trigger } = useSubmitContactDetail();
 
   return (
     <main className="container px-4 lg:py-8 py-6 lg:space-y-8 space-y-6">

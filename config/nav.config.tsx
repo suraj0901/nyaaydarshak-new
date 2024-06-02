@@ -11,6 +11,10 @@ const NAV_CONFIG = [
     label: "Blog",
     link: "/blog",
   },
+  {
+    label: "Contact Us",
+    link: "/contact-us",
+  },
 ];
 
 export default NAV_CONFIG;

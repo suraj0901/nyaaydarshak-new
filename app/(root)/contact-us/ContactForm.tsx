@@ -14,6 +14,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { ChevronRight, CircleAlert } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { schema } from "./validation";
+import useSubmitContactDetail from "@/hooks/mutations/useSubmitContactDetail";
 
 interface Prop {
   onSubmit?: () => void;
@@ -23,6 +24,7 @@ export default function ContactForm(prop?: Prop) {
   const form = useForm({
     resolver: zodResolver(schema),
   });
+
   function onSubmit(data: any) {
     console.log(data);
     prop?.onSubmit?.();
