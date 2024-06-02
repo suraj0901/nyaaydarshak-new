@@ -53,7 +53,7 @@ export default function Navbar() {
               </section>
             </SheetContent>
           </Sheet>
-          <Link className="hover:underline underline-offset-4" href="/">
+          <Link className="" href="/">
             <Logo />
           </Link>
         </div>
