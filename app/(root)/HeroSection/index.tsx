@@ -8,7 +8,9 @@ const lora = Lora({ subsets: ["latin"], weight: "700" });
 
 export default function HeroSection() {
   return (
-    <section className="lg:py-[60px] py-7">
+    <section className="lg:py-[60px] py-7 relative bg-blend-color-burn">
+      <div className="bg-[linear-gradient(90deg,#fff_25%,rgba(255,221,19,0.4)_50%,rgba(110,_38,_36,_0.30)_75%,_rgba(72,_36,_110,_0.30)_100%)] blur-[250px] absolute inset-0 -z-40"></div>
+      {/* <div className="bg-[linear-gradient(90deg,#fff_0%,rgba(110,_38,_36,_0.30)_75%,_rgba(72,_36,_110,_0.30)_100%)] bg-blend-overlay backdrop-blur-[100px] absolute inset-0 -z-50"></div> */}
       <div className="container relative px-4">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between">
           <div className="space-y-5 max-w-xl">
@@ -30,6 +32,7 @@ export default function HeroSection() {
             width={500}
             height={500}
             alt="Hero Image"
+            className="rounded-full"
           />
         </div>
         <PageNavigation />
