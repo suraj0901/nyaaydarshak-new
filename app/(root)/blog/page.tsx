@@ -1,6 +1,10 @@
-import { useBlogs } from "@/hooks/useBlogs";
+"use client";
+
+import useBlogsWithSuspense from "@/hooks/useBlogs";
 import Image from "next/image";
 import NoContent from "./NoContent";
+import Error from "./error";
+import LoadingState from "./loading";
 
 // export default function BlogPage() {
 //   return (
@@ -12,8 +16,12 @@ import NoContent from "./NoContent";
 //   );
 // }
 
-export default async function Blogs() {
-  const { blogs } = await useBlogs();
+/* export default async  */
+export default function Blogs() {
+  const { blogs, error, isLoading } = useBlogsWithSuspense();
+
+  if (isLoading) return <LoadingState />;
+  if (error) return <Error error={error} />;
 
   if (blogs?.length === 0) return <NoContent />;
 

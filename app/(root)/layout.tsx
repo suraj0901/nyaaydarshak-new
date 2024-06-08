@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "../globals.css";
-import { Toaster } from "@/components/ui/toaster";
+import { Toaster } from "sonner";
 
 const lato = Lato({ subsets: ["latin"], weight: "400" });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
           "flex flex-col min-h-screen bg-background antialiased"
         )}
       >
-        <Toaster />
+        <Toaster richColors position="top-center" />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -6,12 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import useSubmitContactDetail from "@/hooks/mutations/useSubmitContactDetail";
 import Link from "next/link";
+import { toast } from "sonner";
 
 export default function ContactUs() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const { trigger, isMutating } = useSubmitContactDetail({
     onSuccess() {
       setIsFormSubmitted(true);
+    },
+    onError(error) {
+      toast.error(error.message);
     },
   });
 
