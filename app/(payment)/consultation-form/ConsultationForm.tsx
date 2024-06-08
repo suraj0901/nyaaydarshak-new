@@ -11,7 +11,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChevronRight, CircleAlert } from "lucide-react";
+import { ChevronRight, CircleAlert, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { schema, Gender, Languages } from "./validation";
 import { Label } from "@/components/ui/label";
@@ -25,7 +25,8 @@ import {
 } from "@/components/ui/select";
 
 interface Prop {
-  onSubmit: () => void;
+  onSubmit: (data: any) => void;
+  isMutating: boolean;
 }
 
 export function ConsultationForm(prop: Prop) {
@@ -33,15 +34,17 @@ export function ConsultationForm(prop: Prop) {
     resolver: zodResolver(schema),
   });
   function onSubmit(data: any) {
-    console.log(data);
-    prop.onSubmit();
+    prop.onSubmit(data);
   }
+  const submit_text = prop?.isMutating ? "Sending Message" : "Send Message";
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <section className="space-y-3">
           <FormField
-            name="name"
+            name="fullName"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -69,6 +72,7 @@ export function ConsultationForm(prop: Prop) {
           />
           <FormField
             name="phone"
+            disabled={prop.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -97,6 +101,7 @@ export function ConsultationForm(prop: Prop) {
           />
           <FormField
             name="gender"
+            disabled={prop.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -132,6 +137,7 @@ export function ConsultationForm(prop: Prop) {
           />
           <FormField
             name="age"
+            disabled={prop.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -159,7 +165,8 @@ export function ConsultationForm(prop: Prop) {
             )}
           />
           <FormField
-            name="language"
+            name="preferredLanguage"
+            disabled={prop.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -191,8 +198,12 @@ export function ConsultationForm(prop: Prop) {
             )}
           />
         </section>
-        <Button className="font-semibold w-full">
-          Send Message <ChevronRight size={15} className="ml-1" />
+        <Button disabled={prop?.isMutating} className="font-semibold w-full">
+          {prop?.isMutating ? <Loader2 className="animate-spin mr-1" /> : null}{" "}
+          {submit_text}{" "}
+          {!prop?.isMutating ? (
+            <ChevronRight size={15} className="ml-1" />
+          ) : null}
         </Button>
         <p className="text-xs text-gray-600">
           Your information will only be used to contact you regarding your

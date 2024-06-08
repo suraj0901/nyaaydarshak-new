@@ -1,28 +1,28 @@
-"use client";
-
-import useBlogs from "@/hooks/useBlogs";
-import { Loader } from "lucide-react";
+import { useBlogs } from "@/hooks/useBlogs";
 import Image from "next/image";
 import NoContent from "./NoContent";
 
-export default function Blog() {
-  const { blogs, isLoading } = useBlogs();
+// export default function BlogPage() {
+//   return (
+//     <div className="space-y-4">
+//       <Suspense fallback={<LoadingState />}>
+//         <Blogs />
+//       </Suspense>
+//     </div>
+//   );
+// }
 
-  if (isLoading)
-    return (
-      <div className="grid place-items-center h-[500px]">
-        <Loader className="animate-spin" />
-      </div>
-    );
+export default async function Blogs() {
+  const { blogs } = await useBlogs();
 
-  if (blogs.length === 0) return <NoContent />;
+  if (blogs?.length === 0) return <NoContent />;
 
   const primary_card = blogs[0];
   const secondary_card = blogs.slice(1);
 
-  const content = (
+  return (
     <section className="lg:space-y-8 space-y-6">
-      <div className="flex lg:flex-row flex-col items-center p-3 gap-y-3">
+      <div className="flex lg:flex-row flex-col lg:items-center p-3 gap-y-3">
         <div className="flex-[2] aspect-video rounded-lg overflow-hidden">
           <Image
             src={primary_card.thumbnail}
@@ -56,6 +56,4 @@ export default function Blog() {
       </div>
     </section>
   );
-
-  return <div className="space-y-4">{content}</div>;
 }

@@ -7,7 +7,7 @@ const phoneRegex = new RegExp(
 );
 
 export const schema = z.object({
-  name: z
+  fullName: z
     .string({ message: requireMsg("Your Full Name") })
     .min(1, { message: requireMsg("Your Full Name") }),
   email: z
@@ -16,7 +16,7 @@ export const schema = z.object({
   phone: z
     .string({ message: requireMsg("Phone Number") })
     .regex(phoneRegex, "Please enter a valid Phone number"),
-  help: z
+  message: z
     .string({ message: requireMsg("This") })
     .min(1, { message: requireMsg("This") }),
 });

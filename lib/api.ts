@@ -11,16 +11,18 @@ export async function delete_default(url: string) {
   return base.delete(url).then((data) => data.data);
 }
 
-export async function post_default(url: string, data: any) {
+export async function post_default(url: string, { arg: data }: any) {
   return base.post(url, data).then((data) => data.data);
 }
 
-export async function put_default(url: string, data: any) {
+export async function put_default(url: string, { arg: data }: any) {
   return base.post(url, data).then((data) => data.data);
 }
 
 const api = {
   blogs: "/blogs",
   contact: "/contact",
+  training: "/training",
+  consultations: "/consultations/",
 };
 export default api;

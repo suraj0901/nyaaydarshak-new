@@ -6,9 +6,25 @@ import { useState } from "react";
 import { WorkSheetForm } from "./WorkSheetForm";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import useSWRMutation from "swr/mutation";
+import api, { post_default } from "@/lib/api";
+import Link from "next/link";
+import { toast } from "sonner";
 
 export default function TrainingWorkShop() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const { trigger, isMutating } = useSWRMutation(api.training, post_default, {
+    onSuccess() {
+      setIsFormSubmitted(true);
+    },
+    onError(error) {
+      toast.error(error.message);
+    },
+  });
+
+  function handleSubmit(data: any) {
+    trigger(data);
+  }
   return (
     <Card className="border-gray-100 rounded-2xl shadow-[rgba(149,157,165,0.2)_0px_8px_24px] max-w-md mx-auto lg:mt-14">
       <CardHeader className="p-8">
@@ -26,12 +42,12 @@ export default function TrainingWorkShop() {
                 respectful and inclusive workplace culture.
               </p>
             </div>
-            <Button className="w-full" variant="outline">
-              Got it
+            <Button className="w-full" variant="outline" asChild>
+              <Link href="/">Got it</Link>
             </Button>
           </div>
         ) : (
-          <WorkSheetForm onSubmit={() => setIsFormSubmitted(true)} />
+          <WorkSheetForm isMutating={isMutating} onSubmit={handleSubmit} />
         )}
       </CardHeader>
     </Card>

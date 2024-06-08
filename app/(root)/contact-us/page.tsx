@@ -5,11 +5,19 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import useSubmitContactDetail from "@/hooks/mutations/useSubmitContactDetail";
+import Link from "next/link";
 
 export default function ContactUs() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const { trigger } = useSubmitContactDetail();
+  const { trigger, isMutating } = useSubmitContactDetail({
+    onSuccess() {
+      setIsFormSubmitted(true);
+    },
+  });
 
+  function handleSubmit(data: any) {
+    trigger(data);
+  }
   return (
     <main className="container px-4 lg:py-8 py-6 lg:space-y-8 space-y-6">
       <h1 className="lg:text-4xl text-[22px] tracking-wider lg:leading-[46px]  leading-[30px] font-semibold max-w-2xl">
@@ -29,12 +37,12 @@ export default function ContactUs() {
                   in touch with you shortly.
                 </p>
               </div>
-              <Button className="w-full" variant="outline">
-                Got it
+              <Button className="w-full" variant="outline" asChild>
+                <Link href="/">Got it</Link>
               </Button>
             </div>
           ) : (
-            <ContactForm onSubmit={() => setIsFormSubmitted(true)} />
+            <ContactForm isMutating={isMutating} onSubmit={handleSubmit} />
           )}
         </CardHeader>
       </Card>

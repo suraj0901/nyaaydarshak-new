@@ -10,13 +10,14 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { ChevronRight, CircleAlert } from "lucide-react";
+import { ChevronRight, CircleAlert, Loader2 } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { schema } from "./validation";
 
 interface Prop {
-  onSubmit: () => void;
+  onSubmit: (data: any) => void;
+  isMutating: boolean;
 }
 
 export function WorkSheetForm(prop: Prop) {
@@ -24,15 +25,18 @@ export function WorkSheetForm(prop: Prop) {
     resolver: zodResolver(schema),
   });
   function onSubmit(data: any) {
-    console.log(data);
-    prop.onSubmit();
+    prop.onSubmit(data);
   }
+
+  const submit_text = prop?.isMutating ? "Sending Message" : "Send Message";
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <section className="space-y-2">
           <FormField
-            name="name"
+            disabled={prop?.isMutating}
+            name="fullName"
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -60,6 +64,7 @@ export function WorkSheetForm(prop: Prop) {
           />
           <FormField
             name="email"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -88,6 +93,7 @@ export function WorkSheetForm(prop: Prop) {
           />
           <FormField
             name="phone"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -115,7 +121,8 @@ export function WorkSheetForm(prop: Prop) {
             )}
           />
           <FormField
-            name="organization"
+            name="organisationName"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -145,6 +152,7 @@ export function WorkSheetForm(prop: Prop) {
           />
           <FormField
             name="designation"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -171,7 +179,8 @@ export function WorkSheetForm(prop: Prop) {
             )}
           />
           <FormField
-            name="help"
+            name="message"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -200,8 +209,12 @@ export function WorkSheetForm(prop: Prop) {
             )}
           />
         </section>
-        <Button className="font-semibold w-full">
-          Send Message <ChevronRight size={15} className="ml-1" />
+        <Button disabled={prop?.isMutating} className="font-semibold w-full">
+          {prop?.isMutating ? <Loader2 className="animate-spin mr-1" /> : null}{" "}
+          {submit_text}{" "}
+          {!prop?.isMutating ? (
+            <ChevronRight size={15} className="ml-1" />
+          ) : null}
         </Button>
         <p className="text-xs text-gray-600">
           Your information will only be used to contact you regarding your

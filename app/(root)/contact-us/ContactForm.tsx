@@ -11,13 +11,13 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChevronRight, CircleAlert } from "lucide-react";
+import { ChevronRight, CircleAlert, Loader, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { schema } from "./validation";
-import useSubmitContactDetail from "@/hooks/mutations/useSubmitContactDetail";
 
 interface Prop {
-  onSubmit?: () => void;
+  isMutating: boolean;
+  onSubmit?: (data: any) => void;
 }
 
 export default function ContactForm(prop?: Prop) {
@@ -26,15 +26,17 @@ export default function ContactForm(prop?: Prop) {
   });
 
   function onSubmit(data: any) {
-    console.log(data);
-    prop?.onSubmit?.();
+    prop?.onSubmit?.(data);
   }
+
+  const submit_text = prop?.isMutating ? "Sending Message" : "Send Message";
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <section className="space-y-3">
           <FormField
-            name="name"
+            disabled={prop?.isMutating}
+            name="fullName"
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -61,6 +63,7 @@ export default function ContactForm(prop?: Prop) {
             )}
           />
           <FormField
+            disabled={prop?.isMutating}
             name="email"
             control={form.control}
             render={({ field, fieldState }) => (
@@ -89,6 +92,7 @@ export default function ContactForm(prop?: Prop) {
             )}
           />
           <FormField
+            disabled={prop?.isMutating}
             name="phone"
             control={form.control}
             render={({ field, fieldState }) => (
@@ -117,7 +121,8 @@ export default function ContactForm(prop?: Prop) {
             )}
           />
           <FormField
-            name="help"
+            name="message"
+            disabled={prop?.isMutating}
             control={form.control}
             render={({ field, fieldState }) => (
               <FormItem className="space-y-1">
@@ -146,8 +151,13 @@ export default function ContactForm(prop?: Prop) {
             )}
           />
         </section>
-        <Button className="font-semibold w-full">
-          Send Message <ChevronRight size={15} className="ml-1" />
+
+        <Button disabled={prop?.isMutating} className="font-semibold w-full">
+          {prop?.isMutating ? <Loader2 className="animate-spin mr-1" /> : null}{" "}
+          {submit_text}{" "}
+          {!prop?.isMutating ? (
+            <ChevronRight size={15} className="ml-1" />
+          ) : null}
         </Button>
         <p className="text-xs text-gray-600">
           Your information will only be used to contact you regarding your

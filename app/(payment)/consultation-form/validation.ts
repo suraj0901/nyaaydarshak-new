@@ -22,7 +22,7 @@ const phoneRegex = new RegExp(
 const gender = Gender.map((item) => item.value);
 const languages = Languages.map((item) => item.value);
 export const schema = z.object({
-  name: z
+  fullName: z
     .string({ message: requireMsg("Your Full Name") })
     .min(1, { message: requireMsg("Your Full Name") }),
   phone: z
@@ -34,7 +34,7 @@ export const schema = z.object({
   gender: z.enum(gender, {
     message: "Please select a gender",
   }),
-  language: z.enum(languages, {
+  preferredLanguage: z.enum(languages, {
     message: "Please select a language",
   }),
 });
