@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const base = axios.create({
-  baseURL: "http://localhost:4000",
+  baseURL: "https://server.nyaaydarshak.com",
 });
 
 export async function get_default(url: string) {
