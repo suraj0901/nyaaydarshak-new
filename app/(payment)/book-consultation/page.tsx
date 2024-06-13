@@ -18,9 +18,9 @@ export default function BookConsultation() {
   const router = useRouter();
   function onSubmit(data: any) {
     if (data.service == Service.CONSULTATION) {
-      router.push("/book-consultation/payment");
+      router.push("/book-consultation/payment.html");
     } else {
-      router.push("/trainging-workshop");
+      router.push("/trainging-workshop.html");
     }
   }
 

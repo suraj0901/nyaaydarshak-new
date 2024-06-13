@@ -12,7 +12,7 @@ export default function SelectDate() {
   const router = useRouter();
 
   function onSubmit() {
-    router.push("/book-consultation/select-date");
+    router.push("/book-consultation/select-date.html");
   }
 
   return (

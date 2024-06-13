@@ -27,9 +27,9 @@ export default function Payment() {
   const router = useRouter();
   function onSubmit(data: any) {
     if (data.service == Service.UPI) {
-      router.push("/book-consultation/payment/upi");
+      router.push("/book-consultation/payment/upi.html");
     } else {
-      router.push("/consultation-form");
+      router.push("/consultation-form.html");
     }
   }
 

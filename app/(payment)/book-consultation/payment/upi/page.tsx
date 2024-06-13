@@ -12,7 +12,7 @@ export default function Payment() {
   const router = useRouter();
 
   function onSubmit(data: any) {
-    router.push("/book-consultation/select-date");
+    router.push("/book-consultation/select-date.html");
   }
 
   return (
