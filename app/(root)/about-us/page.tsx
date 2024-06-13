@@ -39,7 +39,7 @@ export default function AboutUs() {
         </div>
         <video controls className="w-full aspect-video rounded-sm">
           <source
-            src="https://videos.pexels.com/video-files/15921892/15921892-uhd_3840_2160_50fps.mp4"
+            src="https://youtu.be/QmsmcuMepGU?si=7QbzkJHPZQTsyGR3"
             type="video/mp4"
           />
         </video>
