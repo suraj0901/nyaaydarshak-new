@@ -1,19 +1,19 @@
 const NAV_CONFIG = [
   {
     label: "About Us",
-    link: "/about-us",
+    link: "/about-us.html",
   },
   {
     label: "Our Services",
-    link: "/our-services",
+    link: "/our-services.html",
   },
   {
     label: "Blog",
-    link: "/blog",
+    link: "/blog.html",
   },
   {
     label: "Contact Us",
-    link: "/contact-us",
+    link: "/contact-us.html",
   },
 ];
 

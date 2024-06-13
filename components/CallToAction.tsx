@@ -7,7 +7,7 @@ export default function CallToAction({ className }: { className?: string }) {
   return (
     <Link
       className="hover:underline underline-offset-4"
-      href={"/book-consultation"}
+      href={"/book-consultation.html"}
     >
       <Button
         className={cn(
