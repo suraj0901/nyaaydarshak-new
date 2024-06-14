@@ -3,7 +3,7 @@
 import api, { get_default } from "@/lib/api";
 import useSWR from "swr";
 
-interface Blog {
+export interface Blog {
   description: string;
   id: number;
   isClosed: boolean;
