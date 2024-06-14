@@ -65,19 +65,34 @@ export default function Footer() {
         <section className="space-y-4">
           <h4 className="tracking-wide text-gray-500 uppercase">SOCIAL</h4>
           <div className="grid gap-y-2">
-            <Link className="hover:underline underline-offset-4" href="/">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="https://x.com/NyaayDarshak"
+            >
               <p>X/Twitter</p>
             </Link>
-            <Link className="hover:underline underline-offset-4" href="/">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="https://www.facebook.com/people/NyaayDarshak/100091948707491"
+            >
               <p>Facebook</p>
             </Link>
-            <Link className="hover:underline underline-offset-4" href="/">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="https://www.instagram.com/nyaaydarshak"
+            >
               <p>Instagram</p>
             </Link>
-            <Link className="hover:underline underline-offset-4" href="/">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="https://www.linkedin.com/company/nyaaydarshak"
+            >
               <p>Linkedin</p>
             </Link>
-            <Link className="hover:underline underline-offset-4" href="/">
+            <Link
+              className="hover:underline underline-offset-4"
+              href="https://youtube.com/@nyaaydarshak"
+            >
               <p>Youtube</p>
             </Link>
           </div>

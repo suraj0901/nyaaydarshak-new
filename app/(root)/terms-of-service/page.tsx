@@ -92,7 +92,21 @@ export default function TermsOfService() {
         </div>
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold tracking-wide">
-            6. Limitation of Liability
+            6. Non-Refundable Payments
+          </h3>
+          <div className="ml-8 space-y-1">
+            <p>
+              All payments made towards our services are final and
+              non-refundable. By making a payment, you acknowledge and agree
+              that no refunds will be issued for any reason, including but not
+              limited to dissatisfaction with the service, change of mind, or
+              any other circumstances.
+            </p>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <h3 className="text-2xl font-semibold tracking-wide">
+            7. Limitation of Liability
           </h3>
           <ul className="ml-8 space-y-1 list-disc">
             <li>
@@ -119,7 +133,7 @@ export default function TermsOfService() {
         </div>
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold tracking-wide">
-            7. Changes to Terms of Service
+            8. Changes to Terms of Service
           </h3>
           <div className="ml-8 space-y-1">
             <p>
@@ -131,12 +145,12 @@ export default function TermsOfService() {
         </div>
         <div className="space-y-4">
           <h3 className="text-2xl font-semibold tracking-wide">
-            8. Contact Us
+            9. Contact Us
           </h3>
           <div className="ml-8 space-y-1">
             <p>
-              If you have any questions or concerns about this Privacy Policy,
-              please contact us at
+              If you have any questions or concerns about this{" "}
+              <b>Terms of Service</b>, please contact us at
             </p>
             <a
               className="hover:underline underline-offset-4 text-blue-500"
@@ -149,7 +163,7 @@ export default function TermsOfService() {
         <div className="ml-8">
           <p>
             By using our website, you agree to the terms outlined in this
-            Privacy Policy.
+            <b>Terms of Service</b>.
           </p>
         </div>
       </section>

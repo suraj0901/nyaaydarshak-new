@@ -6,16 +6,6 @@ import NoContent from "./NoContent";
 import Error from "./error";
 import LoadingState from "./loading";
 
-// export default function BlogPage() {
-//   return (
-//     <div className="space-y-4">
-//       <Suspense fallback={<LoadingState />}>
-//         <Blogs />
-//       </Suspense>
-//     </div>
-//   );
-// }
-
 /* export default async  */
 export default function Blogs() {
   const { blogs, error, isLoading } = useBlogsWithSuspense();
