@@ -19,13 +19,13 @@ export default function Footer() {
             </Link>
             <Link
               className="hover:underline underline-offset-4"
-              href={"/about-us"}
+              href={"/about-us.html"}
             >
               <p>About Us</p>
             </Link>
             <Link
               className="hover:underline underline-offset-4"
-              href={"/our-services"}
+              href={"/our-services.html"}
             >
               <p>Our Services</p>
             </Link>
@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="grid gap-y-2">
             <Link
               className="hover:underline underline-offset-4"
-              href="/contact-us"
+              href="/contact-us.html"
             >
               <p>Contact Us</p>
             </Link>
@@ -50,13 +50,13 @@ export default function Footer() {
           <div className="grid gap-y-2">
             <Link
               className="hover:underline underline-offset-4"
-              href="/privacy-policy"
+              href="/privacy-policy.html"
             >
               <p>Privacy Policy</p>
             </Link>
             <Link
               className="hover:underline underline-offset-4"
-              href="/terms-of-service"
+              href="/terms-of-service.html"
             >
               <p>Terms of Service</p>
             </Link>
