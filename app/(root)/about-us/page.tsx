@@ -6,7 +6,7 @@ export default function AboutUs() {
       <Title className="lg:py-8 py-6">About Us</Title>
       <section className="space-y-6 lg:mb-8 mb-7 max-w-3xl">
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Mission</h3>
+          <h3 className="lg:text-2xl text-lg font-semibold">Mission</h3>
           <p>
             Our mission is simple yet powerful— bridging the justice gap by
             offering affordable solutions to victims/survivors of gender-based
@@ -16,7 +16,7 @@ export default function AboutUs() {
           </p>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">Vision</h3>
+          <h3 className="lg:text-2xl text-lg font-semibold">Vision</h3>
           <p>
             At NyaayDarshak, we transcend the role of mere advocates; we are
             agents of change committed to challenging societal norms and
@@ -28,7 +28,7 @@ export default function AboutUs() {
       </section>
       <section className="space-y-6 mb-8">
         <div className="space-y-4 max-w-3xl">
-          <h3 className="text-2xl font-semibold">Get to know us</h3>
+          <h3 className="lg:text-2xl text-lg font-semibold">Get to know us</h3>
           <p>
             Experience NyaayDarshak&apos;s journey firsthand. Discover our
             mission-driven approach, see our vision in action, and learn how
@@ -37,12 +37,20 @@ export default function AboutUs() {
             a fundamental right.
           </p>
         </div>
-        <video controls className="w-full aspect-video rounded-sm">
+        <iframe
+          src="https://www.youtube.com/embed/QmsmcuMepGU?si=e4WbhASnG-1IsoHJ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          className="w-full aspect-video rounded-sm"
+        ></iframe>
+        {/* <video controls className="w-full aspect-video rounded-sm" reff>
           <source
             src="https://youtu.be/QmsmcuMepGU?si=7QbzkJHPZQTsyGR3"
             type="video/mp4"
           />
-        </video>
+        </video> */}
       </section>
     </main>
   );

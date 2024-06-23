@@ -16,15 +16,15 @@ export default function PrivacyPolicy() {
 
       <section className="mt-9 space-y-6 max-w-4xl">
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             1. Information We Collect
           </h3>
           <div className="sapce-y-4 ml-8">
             <div className="space-y-1">
-              <h4 className="text-lg tracking-wide font-semibold">
+              <h4 className="lg:text-lg text-base tracking-wide font-semibold">
                 a. Personal Information:
               </h4>
-              <p>
+              <p className="text-sm lg:text-base">
                 We may collect personal information, including but not limited
                 to, names, email addresses, phone numbers, and postal addresses,
                 when voluntarily submitted by our website visitors through
@@ -32,10 +32,10 @@ export default function PrivacyPolicy() {
               </p>
             </div>
             <div className="space-y-1">
-              <h4 className="text-lg tracking-wide font-semibold">
+              <h4 className="lg:text-lg text-base tracking-wide font-semibold">
                 b. Non-Personal Information:
               </h4>
-              <p>
+              <p className="text-sm lg:text-base">
                 We may also collect non-personal information, such as browser
                 type, IP address, and other technical information, to improve
                 the functionality of our website and enhance your experience.
@@ -44,11 +44,11 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             2. How We Use Your Information
           </h3>
           <div className="ml-8 space-y-1">
-            <h4 className="text-lg tracking-wide font-semibold">
+            <h4 className="lg:text-lg text-base tracking-wide font-semibold">
               We may use the collected information for the following purposes:
             </h4>
             <p>To communicate with you and respond to your inquiries.</p>
@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             3. Information Sharing
           </h3>
           <div className="ml-8 space-y-1">
@@ -77,7 +77,9 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">4. Cookies</h3>
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
+            4. Cookies
+          </h3>
           <div className="ml-8 space-y-1">
             <p>
               Our website may use cookies to enhance your experience. You can
@@ -88,7 +90,9 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">5. Security</h3>
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
+            5. Security
+          </h3>
           <div className="ml-8 space-y-1">
             <p>
               We take reasonable steps to protect your personal information from
@@ -99,7 +103,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             6. Changes to This Privacy Policy
           </h3>
           <div className="ml-8 space-y-1">
@@ -111,7 +115,7 @@ export default function PrivacyPolicy() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             7. Contact Us
           </h3>
           <div className="ml-8 space-y-1">

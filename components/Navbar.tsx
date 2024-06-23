@@ -41,12 +41,14 @@ export default function Navbar() {
                 ))}
               </ul>
               <section className="space-y-4">
-                <Button
-                  variant="outline"
-                  className="text-sm font-semibold w-full"
-                >
-                  Donate <Heart className="ml-1" size={15} />
-                </Button>
+                <Link href={"/donate.html"}>
+                  <Button
+                    variant="outline"
+                    className="text-sm font-semibold w-full"
+                  >
+                    Donate <Heart className="ml-1" size={15} />
+                  </Button>
+                </Link>
                 <div>
                   <CallToAction className="w-full" />
                 </div>
@@ -60,12 +62,14 @@ export default function Navbar() {
         <div className="hidden  lg:flex items-center justify-between flex-1">
           <div className="flex items-center">{nav_items}</div>
           <section className="flex items-center gap-x-2">
-            <Button
-              variant="outline"
-              className="!px-6 !py-[22px] lg:!py-5 text-sm font-semibold"
-            >
-              Donate <Heart className="ml-1" size={15} />
-            </Button>
+            <Link href={"/donate.html"}>
+              <Button
+                variant="outline"
+                className="!px-6 !py-[22px] lg:!py-5 text-sm font-semibold"
+              >
+                Donate <Heart className="ml-1" size={15} />
+              </Button>
+            </Link>
             <div>
               <CallToAction className="!py-[22px]" />
             </div>

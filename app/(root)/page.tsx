@@ -9,7 +9,7 @@ import Workshop from "./Workshop";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <HeroSection />
       <Collaborations />
       <Consultation />
@@ -18,6 +18,6 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <NewsLetter />
-    </main>
+    </>
   );
 }

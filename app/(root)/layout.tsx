@@ -28,7 +28,7 @@ export default function RootLayout({
       >
         <Toaster richColors position="top-center" />
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <>{children}</>
         <Footer />
       </body>
     </html>

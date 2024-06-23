@@ -16,7 +16,7 @@ export default function TermsOfService() {
 
       <section className="mt-9 space-y-6 max-w-4xl">
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             1. Acceptance of Terms
           </h3>
           <div className="ml-8 space-y-1">
@@ -29,7 +29,7 @@ export default function TermsOfService() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             2. Use of the Website
           </h3>
           <ul className="ml-8 space-y-1 list-disc">
@@ -53,7 +53,7 @@ export default function TermsOfService() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             3. Intellectual Property
           </h3>
           <div className="ml-8 space-y-1">
@@ -67,7 +67,9 @@ export default function TermsOfService() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">4. Privacy</h3>
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
+            4. Privacy
+          </h3>
           <div className="ml-8 space-y-1">
             <p>
               Your use of our website is also governed by our Privacy Policy. By
@@ -77,7 +79,7 @@ export default function TermsOfService() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             5. Links to Third-Party Websites
           </h3>
           <div className="ml-8 space-y-1">
@@ -91,7 +93,7 @@ export default function TermsOfService() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             6. Non-Refundable Payments
           </h3>
           <div className="ml-8 space-y-1">
@@ -105,7 +107,7 @@ export default function TermsOfService() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             7. Limitation of Liability
           </h3>
           <ul className="ml-8 space-y-1 list-disc">
@@ -132,7 +134,7 @@ export default function TermsOfService() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             8. Changes to Terms of Service
           </h3>
           <div className="ml-8 space-y-1">
@@ -144,7 +146,7 @@ export default function TermsOfService() {
           </div>
         </div>
         <div className="space-y-4">
-          <h3 className="text-2xl font-semibold tracking-wide">
+          <h3 className="lg:text-2xl text-lg font-semibold tracking-wide">
             9. Contact Us
           </h3>
           <div className="ml-8 space-y-1">

@@ -19,7 +19,7 @@ export default function FAQ() {
               key={index}
               value={index + ""}
             >
-              <AccordionTrigger className="text-left">
+              <AccordionTrigger className="text-left hover:no-underline">
                 {item.question}
               </AccordionTrigger>
               <AccordionContent className="text-base font-normal text-gray-600">

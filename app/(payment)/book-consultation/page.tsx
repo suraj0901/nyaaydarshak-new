@@ -12,6 +12,7 @@ import { ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Option, Service } from "./Option";
+import { cn } from "@/lib/utils";
 
 export default function BookConsultation() {
   const form = useForm();
@@ -72,7 +73,10 @@ export default function BookConsultation() {
                 <Button
                   disabled={!field.value}
                   size="lg"
-                  className="text-base font-semibold px-14 w-full lg:w-fit"
+                  className={cn(
+                    "text-sm font-semibold !px-6 bg-[linear-gradient(180deg,#FDD85D_0%,#FDC921_100%)] shadow-[0px_4px_12px_0px_rgba(253,_216,_93,_0.12),_0px_-1px_4px_0px_rgba(0,0,0,0.12)_inset] !py-[22px]",
+                    "text-base font-semibold px-14 w-full lg:w-fit"
+                  )}
                 >
                   Continue <ChevronRight size={15} className="ml-1" />
                 </Button>

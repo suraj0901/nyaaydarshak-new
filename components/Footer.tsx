@@ -4,7 +4,7 @@ import Logo from "./Logo";
 export default function Footer() {
   return (
     <section className="border-t border-[#ECEFF2]">
-      <footer className="container flex flex-col lg:flex-row gap-y-6 px-4 lg:py-[60px] py-7 justify-between">
+      <footer className="container flex flex-col lg:flex-row gap-y-6 px-4 lg:py-[60px] py-7 pb-24 justify-between">
         <section>
           <Logo />
           <p className="max-w-[200px]">
