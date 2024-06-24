@@ -51,12 +51,14 @@ export default function Donate() {
                 >
                   Contribute Online
                 </TabsTrigger>
+                /**
                 <TabsTrigger
                   className="justify-start w-full text-base font-semibold py-2.5 data-[state=active]:bg-gray-300 lg:rounded-r-none"
                   value="offline"
                 >
                   Contribute Offline
                 </TabsTrigger>
+                */
               </TabsList>
             </Tabs>
             <div className="hidden lg:block text-wrap break-words space-y-4 text-muted-foreground pr-8 pl-4">
