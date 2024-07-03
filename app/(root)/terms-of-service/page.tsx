@@ -160,6 +160,13 @@ export default function TermsOfService() {
             >
               contact.us.nyaaydarshak@gmail.com
             </a>
+            <p className="">Registered address :</p>
+            <p>
+              Lalman Niwas, Ground Floor <br /> Laxmi Narayan Lane, Vidya Sagar
+              Pally, Khalpara, Siliguri <br /> Post Office and Police Station -
+              Siliguri <br /> District: Darjeeling, West Bengal, India <br />{" "}
+              Pin - 734005
+            </p>
           </div>
         </div>
         <div className="ml-8">
