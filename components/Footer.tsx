@@ -29,6 +29,13 @@ export default function Footer() {
             >
               <p>Our Services</p>
             </Link>
+            <Link
+              className="hover:underline underline-offset-4"
+              href={"https://pages.razorpay.com/nyaaydarshak"}
+              target="_blank"
+            >
+              <p>Donate</p>
+            </Link>
           </div>
         </section>
         <section className="space-y-4">

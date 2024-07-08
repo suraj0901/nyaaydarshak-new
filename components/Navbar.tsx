@@ -62,7 +62,10 @@ export default function Navbar() {
         <div className="hidden  lg:flex items-center justify-between flex-1">
           <div className="flex items-center">{nav_items}</div>
           <section className="flex items-center gap-x-2">
-            <Link href={"/donate.html"}>
+            <Link
+              target="_blank"
+              href={"https://pages.razorpay.com/nyaaydarshak"}
+            >
               <Button
                 variant="outline"
                 className="!px-6 !py-[22px] lg:!py-5 text-sm font-semibold"

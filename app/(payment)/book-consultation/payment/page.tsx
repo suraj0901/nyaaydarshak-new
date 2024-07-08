@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Option } from "../Option";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 enum Service {
   UPI = "UPI",
@@ -26,9 +27,10 @@ export default function Payment() {
     },
   });
   const router = useRouter();
+
   function onSubmit(data: any) {
     if (data.service == Service.UPI) {
-      router.push("/book-consultation/payment/upi.html");
+      router.push("https://pages.razorpay.com/nyaaydarshak-book-consultation");
     } else {
       router.push("/consultation-form.html");
     }
@@ -77,16 +79,22 @@ export default function Payment() {
                 <FormMessage />
               </FormItem>
               <footer>
-                <Button
-                  disabled={!field.value}
-                  size="lg"
-                  className={cn(
-                    "text-sm font-semibold !px-6 bg-[linear-gradient(180deg,#FDD85D_0%,#FDC921_100%)] shadow-[0px_4px_12px_0px_rgba(253,_216,_93,_0.12),_0px_-1px_4px_0px_rgba(0,0,0,0.12)_inset] !py-[22px]",
-                    "text-base font-semibold px-14 w-full lg:w-fit"
-                  )}
+                <Link
+                  href="https://pages.razorpay.com/nyaaydarshak-book-consultation"
+                  target="_blank"
                 >
-                  Continue <ChevronRight size={15} className="ml-1" />
-                </Button>
+                  <Button
+                    disabled={!field.value}
+                    size="lg"
+                    type="button"
+                    className={cn(
+                      "text-sm font-semibold !px-6 bg-[linear-gradient(180deg,#FDD85D_0%,#FDC921_100%)] shadow-[0px_4px_12px_0px_rgba(253,_216,_93,_0.12),_0px_-1px_4px_0px_rgba(0,0,0,0.12)_inset] !py-[22px]",
+                      "text-base font-semibold px-14 w-full lg:w-fit"
+                    )}
+                  >
+                    Continue <ChevronRight size={15} className="ml-1" />
+                  </Button>
+                </Link>
               </footer>
             </>
           )}
