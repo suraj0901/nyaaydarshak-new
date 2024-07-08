@@ -135,7 +135,7 @@ export function WorkSheetForm(prop: Prop) {
                     className={
                       fieldState.invalid ? "border-red-600" : "border-gray-300"
                     }
-                    placeholder="Talent Wizards Consulting9937123456"
+                    placeholder="Talent Wizards Consulting"
                     {...field}
                     endIcon={
                       fieldState.invalid && (

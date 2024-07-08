@@ -31,7 +31,7 @@ export default function BookConsultation() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="space-y-6 lg:space-y-12 "
       >
-        <header className="lg:text-3xl font-semibold text-[22px] tracking-wider lg:leading-[46px]  leading-[30px]">
+        <header className="lg:text-3xl font-semibold text-[22px] tracking-wider">
           Select your Service: 1:1 Consultation or Workshop
         </header>
         <FormField

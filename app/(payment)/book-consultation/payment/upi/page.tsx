@@ -18,7 +18,7 @@ export default function Payment() {
 
   return (
     <div className="space-y-12">
-      <header className="lg:text-3xl font-semibold text-[22px] tracking-wider lg:leading-[46px]  leading-[30px]">
+      <header className="lg:text-3xl font-semibold text-[22px] tracking-wider ">
         Pay a token amount and book a consultation date
       </header>
       <Card className="max-w-xs w-full h-[320px] mx-auto lg:m-0 border-0 drop-shadow-md">

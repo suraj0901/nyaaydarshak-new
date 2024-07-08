@@ -13,10 +13,10 @@ export default function Navbar() {
       <header
         className={cn(
           lato.className,
-          "container px-4 py-3 flex gap-x-8 justify-between"
+          "container px-2 py-3 lg:p-4 flex gap-x-8 justify-between"
         )}
       >
-        <Link className="hover:underline underline-offset-4" href={"/"}>
+        <Link className="underline-offset-4" href={"/"}>
           <Logo />
         </Link>
         <Link className="hover:underline underline-offset-4" href={"/"}>

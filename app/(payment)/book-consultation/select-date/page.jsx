@@ -17,7 +17,7 @@ export default function SelectDate() {
 
   return (
     <div className="space-y-12">
-      <header className="lg:text-3xl font-semibold text-[22px] tracking-wider lg:leading-[46px]  leading-[30px]">
+      <header className="lg:text-3xl font-semibold text-[22px] tracking-wider ">
         Schedule a consultation using Calendly
       </header>
       <Card className="max-w-xs w-full h-[320px] lg:m-0 mx-auto border-0 drop-shadow-md">

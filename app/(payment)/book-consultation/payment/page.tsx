@@ -30,7 +30,10 @@ export default function Payment() {
 
   function onSubmit(data: any) {
     if (data.service == Service.UPI) {
-      router.push("https://pages.razorpay.com/nyaaydarshak-book-consultation");
+      window.open(
+        "https://pages.razorpay.com/nyaaydarshak-book-consultation",
+        "_blank"
+      );
     } else {
       router.push("/consultation-form.html");
     }
@@ -39,7 +42,7 @@ export default function Payment() {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-12">
-        <header className="lg:text-3xl font-semibold text-[22px] tracking-wider lg:leading-[46px]  leading-[30px]">
+        <header className="lg:text-3xl font-semibold text-[22px] tracking-wider ">
           Pay a token amount and book a consultation date
         </header>
         <FormField
@@ -79,22 +82,22 @@ export default function Payment() {
                 <FormMessage />
               </FormItem>
               <footer>
-                <Link
+                {/* <Link
                   href="https://pages.razorpay.com/nyaaydarshak-book-consultation"
                   target="_blank"
+                > */}
+                <Button
+                  disabled={!field.value}
+                  size="lg"
+                  // type="button"
+                  className={cn(
+                    "text-sm font-semibold !px-6 bg-[linear-gradient(180deg,#FDD85D_0%,#FDC921_100%)] shadow-[0px_4px_12px_0px_rgba(253,_216,_93,_0.12),_0px_-1px_4px_0px_rgba(0,0,0,0.12)_inset] !py-[22px]",
+                    "text-base font-semibold px-14 w-full lg:w-fit"
+                  )}
                 >
-                  <Button
-                    disabled={!field.value}
-                    size="lg"
-                    type="button"
-                    className={cn(
-                      "text-sm font-semibold !px-6 bg-[linear-gradient(180deg,#FDD85D_0%,#FDC921_100%)] shadow-[0px_4px_12px_0px_rgba(253,_216,_93,_0.12),_0px_-1px_4px_0px_rgba(0,0,0,0.12)_inset] !py-[22px]",
-                      "text-base font-semibold px-14 w-full lg:w-fit"
-                    )}
-                  >
-                    Continue <ChevronRight size={15} className="ml-1" />
-                  </Button>
-                </Link>
+                  Continue <ChevronRight size={15} className="ml-1" />
+                </Button>
+                {/* </Link> */}
               </footer>
             </>
           )}

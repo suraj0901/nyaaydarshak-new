@@ -25,7 +25,9 @@ export default function HeroSection() {
                 Making Rights <br className="hidden lg:block" /> Accessible &
                 Affordable
               </h1>
-              <CallToAction />
+              <div>
+                <CallToAction />
+              </div>
             </div>
             <Image
               src={"/HeroImage.png"}

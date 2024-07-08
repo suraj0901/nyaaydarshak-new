@@ -7,6 +7,7 @@ import { Check } from "lucide-react";
 import useSubmitContactDetail from "@/hooks/mutations/useSubmitContactDetail";
 import Link from "next/link";
 import { toast } from "sonner";
+import Title from "@/components/Title";
 
 export default function ContactUs() {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -23,10 +24,8 @@ export default function ContactUs() {
     trigger(data);
   }
   return (
-    <main className="container px-4 lg:py-8 py-6 lg:space-y-8 space-y-6">
-      <h1 className="lg:text-4xl text-[22px] tracking-wider lg:leading-[46px]  leading-[30px] font-semibold max-w-2xl">
-        Contact Us
-      </h1>
+    <main className="container px-4">
+      <Title className="lg:py-8 py-6">Contact Us</Title>
       <Card className="max-w-md border-gray-100 shadow-md">
         <CardHeader className="p-8">
           {isFormSubmitted ? (
