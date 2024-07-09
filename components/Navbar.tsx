@@ -41,7 +41,7 @@ export default function Navbar() {
                 ))}
               </ul>
               <section className="space-y-4">
-                <Link href={"/donate.html"}>
+                <Link href={"https://pages.razorpay.com/nyaaydarshak"}>
                   <Button
                     variant="outline"
                     className="text-sm font-semibold w-full"
